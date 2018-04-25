@@ -9,8 +9,8 @@ import registerServiceWorker from './registerServiceWorker';
 class Square extends React.Component {
     render() {
       return (
-        <button className="square">
-          {/* TODO */}
+        <button className="square" onClick={() => alert('click')}>
+          {this.props.value}
         </button>
       );
     }
@@ -18,8 +18,8 @@ class Square extends React.Component {
   
   class Board extends React.Component {
     renderSquare(i) {
-      return <Square />;
-    }
+      return <Square value={i} />;
+    }//this is a function
   
     render() {
       const status = 'Next player: X';
